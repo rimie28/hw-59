@@ -6,3 +6,8 @@ export interface Movie {
 export interface movieFormProps {
   addMovie: (movie: string) => void;
 }
+
+export interface MovieItemProps {
+  movie: Movie;
+  updateMovie: (id:number, newTitle:string) => void;
+}
