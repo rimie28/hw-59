@@ -28,13 +28,17 @@ const App = () => {
     ))
   }
 
+  const deleteMovie = (id:number) => {
+    setMovies(prevMovies => prevMovies.filter(movie => movie.id !== id));
+  }
+
   return (
     <>
       <div className="container border border-dark rounded p-3 m-4 col-5">
         <MovieForm addMovie={addMovie}/>
         <div className="row mt-4">
           {movies.map((movie: Movie) => (
-            <MovieItem movie={movie} updateMovie={updateMovie}/>
+            <MovieItem movie={movie} updateMovie={updateMovie} deleteMovie={deleteMovie}/>
           ))}
         </div>
       </div>
