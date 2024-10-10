@@ -9,7 +9,6 @@ export interface movieFormProps {
 
 export interface MovieItemProps {
   movie: Movie;
-  updateMovie: (id:number, newTitle:string) => void;
-  deleteMovie: (id:number) => void;
+  updateMovie: (id: number, newTitle: string) => void;
+  deleteMovie: (id: number) => void;
 }
-
